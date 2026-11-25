@@ -1,0 +1,6 @@
+{
+  "name": "LOCAL THREADS",
+  "description": "Hyperlocal editorial clothing storefront for Jalandhar boutiques featuring 360-degree photo inspection, 10x macro fabric zoom, AI size recommendations, and Hinglish StylistAI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

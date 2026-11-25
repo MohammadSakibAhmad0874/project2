@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-obsidian: #121316;
+  --color-atelier: #1A1B20;
+  --color-canvas: #F7F4EE;
+  --color-stone: #EFEAE0;
+  --color-champagne: #C4B494;
+  --color-brass: #9A8357;
+  --color-ink: #16171A;
+  --color-hairline: #E4DED2;
+}
+
+:root {
+  --bg: #F7F4EE;
+  --ink: #16171A;
+  --obsidian: #121316;
+  --stone: #EFEAE0;
+  --brass: #9A8357;
+  --border: #E4DED2;
+}
+
+@layer base {
+  html {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.shadow-editorial {
+  box-shadow: 0 10px 34px rgba(18, 19, 22, 0.06);
+}
+
+.shadow-atelier {
+  box-shadow: 0 24px 60px rgba(10, 11, 14, 0.24);
+}
+
+.perspective-stage {
+  perspective: 1400px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@keyframes atelier-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background-color: #ebe5d9;
+  background-image: linear-gradient(
+    110deg,
+    #ebe5d9 0%,
+    #ebe5d9 38%,
+    #f9f7f2 50%,
+    #ebe5d9 62%,
+    #ebe5d9 100%
+  );
+  background-size: 200% 100%;
+  animation: atelier-shimmer 1.85s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.skeleton-shimmer-dark {
+  background-color: #191a1f;
+  background-image: linear-gradient(
+    110deg,
+    #191a1f 0%,
+    #191a1f 38%,
+    #272931 50%,
+    #191a1f 62%,
+    #191a1f 100%
+  );
+  background-size: 200% 100%;
+  animation: atelier-shimmer 1.85s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
